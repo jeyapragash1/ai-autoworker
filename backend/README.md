@@ -20,6 +20,7 @@ cp .env.example .env
 
 ```bash
 psql "$DATABASE_URL" -f migrations/001_init.sql
+psql "$DATABASE_URL" -f migrations/002_task_lifecycle.sql
 ```
 
 4. Run development server
@@ -33,5 +34,15 @@ npm run dev
 - POST /api/task
   - body: { "input": "Create a REST API using Node.js" }
 - GET /api/task/:id
+- POST /api/task/:id/retry
 - GET /api/tasks
+- GET /api/metrics
 - GET /health
+- GET /readyz
+
+## Operational Features
+
+- Request ID header (`X-Request-Id`) on every response
+- Structured JSON request logs
+- Basic in-memory API rate limiter
+- Readiness probe (`/readyz`) with database connectivity check

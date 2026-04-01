@@ -15,6 +15,11 @@ export type Task = {
   input: string;
   plan: TaskPlan;
   status: TaskStatus;
+  attempts: number;
+  startedAt: string | null;
+  completedAt: string | null;
+  failedAt: string | null;
+  lastError: string | null;
   createdAt: string;
 };
 

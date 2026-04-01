@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { CommandPalette } from "@/components/CommandPalette";
 import { Sidebar } from "@/components/Sidebar";
+import { ToastContainer } from "@/components/ToastContainer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,6 +32,8 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-zinc-950 text-zinc-100">
         <Sidebar />
+        <CommandPalette />
+        <ToastContainer />
         <main className="min-h-screen p-4 md:ml-[250px] md:p-8">{children}</main>
       </body>
     </html>

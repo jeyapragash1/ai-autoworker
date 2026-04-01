@@ -35,6 +35,22 @@ It can:
 
 ---
 
+## 🎯 Core Purpose
+
+The core purpose of this project is to demonstrate that AI can function as a real digital worker, not just a chat assistant.
+
+This system is designed to:
+
+* Turn human intent into action by converting natural language tasks into structured execution steps
+* Automate repetitive technical workflows, reducing manual effort
+* Make AI operational and accountable by executing tasks, tracking progress, and providing transparent logs
+* Continuously improve through stored history, results, and error feedback
+* Showcase real-world AI engineering by combining planning, execution, monitoring, and learning in a single system
+
+Ultimately, this project demonstrates how agentic AI can act as a practical productivity engine for software development and workflow automation.
+
+---
+
 ## ⚡ Live Demo
 
 🚧 Coming Soon

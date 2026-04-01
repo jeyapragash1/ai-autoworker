@@ -1,108 +1,162 @@
 # 🚀 AI AutoWorker
 
-### Your Autonomous AI Employee
+### Autonomous AI Employee for Task Planning & Execution
 
-An AI-powered system that understands tasks, generates execution plans, and performs real-time actions like a junior developer.
-
----
-
-## 🧠 What is this?
-
-AI AutoWorker is a full-stack **agentic AI system** that converts natural language tasks into structured workflows, executes them, and learns from past results.
-
-👉 Think of it as:
-
-> “A mini AI employee that can plan, execute, and improve.”
+<p align="center">
+  <b>Plan. Execute. Learn. Repeat.</b><br/>
+  An agentic AI system that transforms natural language into real-world actions.
+</p>
 
 ---
 
-## ⚡ Key Features
-
-* 🧠 AI Task Understanding (Natural Language → Structured Plan)
-* ⚙️ Execution Engine (Simulated / Real Commands)
-* 📊 Real-time Dashboard (Logs, Status, Outputs)
-* 🗂️ Memory System (Stores past tasks & results)
-* 🔁 Learning Capability (Improves over time)
-* 🌐 Full-stack Architecture
-
----
-
-## 🏗️ Tech Stack
-
-### Frontend
-
-* Next.js
-* Tailwind CSS
-
-### Backend
-
-* Node.js
-* Express.js
-
-### Database
-
-* PostgreSQL
-
-### AI Integration
-
-* OpenAI API
-
-### Deployment
-
-* Vercel (Frontend)
-* Railway / AWS (Backend + DB)
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+</p>
 
 ---
 
-## 🧩 System Architecture
+## 🧠 Overview
 
-User → Frontend → Backend → AI Planner → Execution Engine → Database → Dashboard
+**AI AutoWorker** is a full-stack **agentic AI platform** that simulates a real software engineer.
+
+It can:
+
+* Understand tasks from natural language
+* Break them into structured execution steps
+* Perform actions (code generation / automation)
+* Track progress in real-time
+* Learn from previous executions
+
+> 💡 This project represents the future of how developers will interact with AI.
 
 ---
 
-## 📸 Screenshots
+## ⚡ Live Demo
 
-> Add your UI screenshots here (Dashboard, Task Execution, Logs)
+🚧 Coming Soon
+*(Deploy on Vercel + Railway and add your link here)*
 
 ---
 
-## 🔌 API Endpoints
+## 🎥 Demo Preview
 
-### Create Task
+> Add a GIF here showing:
+>
+> * Task input
+> * Execution flow
+> * Dashboard updates
 
-POST /api/task
+---
+
+## 🏗️ System Architecture
+
+```text
+User Input
+   ↓
+Frontend (Next.js)
+   ↓
+Backend API (Node.js)
+   ↓
+AI Planner (OpenAI)
+   ↓
+Execution Engine
+   ↓
+Database (PostgreSQL)
+   ↓
+Dashboard (Real-time Updates)
+```
+
+---
+
+## 🧩 Core Features
+
+### 🧠 AI Task Understanding
+
+Convert natural language into structured execution plans.
+
+### ⚙️ Execution Engine
+
+Simulate or execute real commands dynamically.
+
+### 📊 Real-time Dashboard
+
+Track logs, progress, and outputs live.
+
+### 🗂️ Memory System
+
+Store tasks, results, and errors for learning.
+
+### 🔁 Adaptive Learning
+
+Improve future responses using historical data.
+
+---
+
+## 🧪 Example Workflow
+
+**Input:**
+
+```text
+"Create a REST API using Node.js"
+```
+
+**AI Output:**
 
 ```json
 {
-  "task": "Create a REST API using Node.js"
+  "steps": [
+    "Initialize project",
+    "Install dependencies",
+    "Create server",
+    "Define routes",
+    "Connect database"
+  ]
 }
 ```
 
 ---
 
-### Get Task Status
+## 🔌 API Endpoints
 
-GET /api/task/:id
+### ➤ Create Task
+
+POST `/api/task`
+
+```json
+{
+  "task": "Build authentication system"
+}
+```
 
 ---
 
-### Get All Tasks
+### ➤ Get Task Status
 
-GET /api/tasks
+GET `/api/task/:id`
 
 ---
 
-## 🗄️ Database Design
+### ➤ Get All Tasks
 
-### Tasks Table
+GET `/api/tasks`
+
+---
+
+## 🗄️ Database Schema
+
+### Tasks
 
 * id
 * input
-* plan (JSON)
+* plan (JSONB)
 * status
 * created_at
 
-### Logs Table
+### Logs
 
 * id
 * task_id
@@ -111,29 +165,41 @@ GET /api/tasks
 
 ---
 
+## 🛠️ Tech Stack
+
+| Layer      | Technology            |
+| ---------- | --------------------- |
+| Frontend   | Next.js, Tailwind CSS |
+| Backend    | Node.js, Express.js   |
+| Database   | PostgreSQL            |
+| AI Engine  | OpenAI API            |
+| Deployment | Vercel, Railway / AWS |
+
+---
+
 ## 🚀 Getting Started
 
-### 1. Clone the repo
+### Clone Repository
 
 ```bash
 git clone https://github.com/your-username/ai-autoworker.git
 cd ai-autoworker
 ```
 
-### 2. Install dependencies
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Setup environment variables
+### Setup Environment
 
 ```env
 OPENAI_API_KEY=your_key_here
 DATABASE_URL=your_db_url
 ```
 
-### 4. Run the app
+### Run Development Server
 
 ```bash
 npm run dev
@@ -141,45 +207,56 @@ npm run dev
 
 ---
 
-## 🧠 How It Works
+## 🔥 Future Enhancements
 
-1. User submits a task
-2. AI converts it into structured steps
-3. Execution engine processes steps
-4. Results & logs are stored
-5. Dashboard displays real-time progress
+* 🤖 Multi-agent architecture (Planner + Executor separation)
+* 🧠 Self-improving AI models
+* 🧪 Secure code execution sandbox
+* 📦 Auto GitHub repository generation
+* 🎙️ Voice-controlled tasks
+* 💬 Slack / WhatsApp integration
 
 ---
 
-## 🔥 Future Improvements
+## 📸 Screenshots
 
-* Multi-agent system (Planner + Executor separation)
-* Code execution sandbox
-* GitHub repo auto-generation
-* Voice-based task input
-* Slack / WhatsApp integration
+> Add:
+>
+> * Dashboard UI
+> * Task execution logs
+> * AI response preview
+
+---
+
+## 📈 Why This Project Matters
+
+Most projects demonstrate CRUD operations.
+
+**AI AutoWorker demonstrates:**
+
+* System design thinking
+* AI-powered automation
+* Real-world engineering workflows
+* Future-ready development skills
 
 ---
 
 ## 👨‍💻 Author
 
-Jeyapragash
+**Jeyapragash**
 Undergraduate | Software Developer
 
 ---
 
-## ⭐ Why This Project Stands Out
+## 🤝 Contributing
 
-This is not a simple CRUD app.
+Pull requests are welcome. For major changes, please open an issue first.
 
-It demonstrates:
+---
 
-* AI integration
-* System design thinking
-* Full-stack engineering
-* Real-world automation
+## ⭐ Support
 
-👉 Built to simulate how future developers will work with AI.
+If you found this project useful, give it a ⭐ and share it!
 
 ---
 
